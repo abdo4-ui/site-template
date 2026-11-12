@@ -8,13 +8,15 @@ export default function Home() {
   return (
     <main>
       <Hero title={siteConfig.businessName} tagline={siteConfig.tagline} />
-      <Services />
-      <Hours />
-      <Contact
-        address={siteConfig.contact.address}
-        email={siteConfig.contact.email}
-        phone={siteConfig.contact.phone}
-      />
+      {siteConfig.sections.services && <Services />}
+      {siteConfig.sections.hours && <Hours />}
+      {siteConfig.sections.contact && (
+        <Contact
+          address={siteConfig.contact.address}
+          email={siteConfig.contact.email}
+          phone={siteConfig.contact.phone}
+        />
+      )}
     </main>
   );
 }

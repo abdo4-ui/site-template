@@ -1,6 +1,11 @@
 export const siteConfig = {
   businessName: "Sample Salon",
   tagline: "Hair and beauty for everyone",
+    sections: {
+    services: true,
+    hours: true,
+    contact: true,
+  },
   contact: {
     email: "hello@samplesalon.example",
     phone: "+00 000 000 000",
