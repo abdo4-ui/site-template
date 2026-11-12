@@ -5,7 +5,7 @@ type HeroProps = {
 
 export default function Hero({ title, tagline }: HeroProps) {
   return (
-    <section>
+    <section className="hero">
       <h1>{title}</h1>
       <p>{tagline}</p>
     </section>
