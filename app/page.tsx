@@ -1,26 +1,14 @@
 import { siteConfig } from "@/lib/site.config";
+import Services from "@/components/Services";
+import Hours from "@/components/Hours";
 
 export default function Home() {
   return (
     <main>
       <h1>{siteConfig.businessName}</h1>
       <p>{siteConfig.tagline}</p>
-      <h2>Services</h2>
-      <ul>
-        {siteConfig.services.map((s) => (
-          <li key={s.name}>
-            {s.name}: ${s.price}. {s.description}
-          </li>
-        ))}
-      </ul>
-      <h2>Hours</h2>
-      <ul>
-        {siteConfig.hours.map((h) => (
-          <li key={h.day}>
-            {h.day}: {h.time}
-          </li>
-        ))}
-      </ul>
+      <Services />
+      <Hours />
       <p>
         {siteConfig.contact.address} | {siteConfig.contact.email} | {siteConfig.contact.phone}
       </p>
